@@ -1,0 +1,214 @@
+.header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    &_block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_left {
+            display: flex;
+            align-items: center;
+            &_btn {
+                width: 24px;
+                height: 16px;
+                position: relative;
+                cursor: pointer;
+                & span {
+                    position: absolute;
+                    left: 0px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #fff;
+                    transition: 0.3s ease-in-out;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    &:first-child {
+                        top: 0px;
+                    }
+                    &:nth-child(2) {
+                        top: 7px;
+                    }
+                    &:last-child {
+                        bottom: 0px;
+                    }
+                }
+                &.active {
+                    & span {
+                        transition: 0.3s ease-in-out;
+                        &:first-child {
+                            top: 7px;
+                            transform: rotate(30deg);
+                        }
+                        &:nth-child(2) {
+                            width: 0%;
+                            opacity: 0;
+                        }
+                        &:last-child {
+                            top: 7px;
+                            transform: rotate(-30deg);
+                        }
+                    }
+                }
+            }
+            &_logo {
+                display: flex;
+                align-items: center;
+                margin-left: 28px;
+                & p {
+                    font-family: 'RF Tone';
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: #FFFFFF;
+                    margin-left: 10px;
+                }
+            }
+        }
+        &_nav {
+            display: none;
+        }
+        &_right {
+            display: flex;
+            align-items: center;
+            &_tel {
+                display: none;
+            }
+            &_lang {
+                & img {
+                    display: none;
+                }
+                & span {
+                    font-family: 'RF Tone';
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #FFFFFF;
+                }
+            }
+            &_qr {
+                display: none;
+            }
+            &_login {
+                width: 40px;
+                height: 40px;
+                box-sizing: border-box;
+                border-radius: 50%;
+                background: #2E00E4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 20px;
+                & img {
+                    width: 26px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        height: 80px;
+        &_block {
+            &_left {
+                &_btn {
+                    display: none;
+                }
+                &_logo {
+                    & p {
+                        display: none;
+                    }
+                }
+            }
+            &_nav {
+                display: block;
+                & ul {
+                    display: flex;
+                    align-items: center;
+                    & li {
+                        margin-left: 60px;
+                        & a {
+                            font-family: 'RF Tone';
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #CBCCD0;
+                        }
+                        & span {
+                            font-family: 'RF Tone';
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #CBCCD0;
+                            cursor: pointer;
+                        }
+                        &.header_block_nav_invest {
+                            & a {
+                                color: #FFFFFF;
+                            }
+                        }
+                        &:first-child {
+                            margin-left: 0px;
+                        }
+                    }
+                } 
+            }
+            &_right {
+                &_tel {
+                    display: flex;
+                    align-items: center;
+                    box-sizing: border-box;
+                    padding: 10px 20px;
+                    border: 1px solid #C2C2C2;
+                    border-radius: 10px;
+                    & img {
+                        margin-right: 10px;
+                    }
+                    & span {
+                        font-family: 'RF Tone';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #FFFFFF;
+                    }
+                }
+                &_lang {
+                    display: flex;
+                    align-items: center;
+                    box-sizing: border-box;
+                    border: 1px solid #C2C2C2;
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin-left: 10px;
+                    & img {
+                        display: block;
+                        margin-right: 8px;
+                    }
+                }
+                &_qr {
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #C2C2C2;
+                    border-radius: 10px;
+                    padding: 10px;
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+                &_login {
+                    width: 50px;
+                    height: 50px;
+                    & img {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.main {
+    position: relative;
+    box-sizing: border-box;
+    height: 100vh;
+    background: url(../img/main/back.png);
+    background-position: 50% 100px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        &_under_title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            & p {
+                margin-left: 5px;
+                font-family: 'RF Tone';
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 28px;
+                color: #FFFFFF;
+            }
+        }
+        & h1 {
+            font-family: 'RF Tone';
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 38px;
+            text-align: center;
+            color: #D1D1D3;
+            margin-top: 7px;
+            & span {
+                background: linear-gradient(147.38deg, #4A60DB -19.92%, #B2E2E4 28.5%, #E4F5F6 78.34%, #CFC0C3 104.88%), #FFFFFF;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+        &_description {
+            font-family: 'RF Tone';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            margin-top: 15px;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 96px;
+        background: rgba(125, 131, 255, 0.2);
+        filter: blur(150px);
+        height: 200px;
+        width: 100%;
+    }
+    @media (min-width: 1200px) {
+        background-size: 1120px;
+        background-repeat: no-repeat;
+        &::after {
+            top: 176px;
+        }
+        &_block {
+            &_under {
+                &_title {
+                    & p {
+                        font-size: 14px;
+                        line-height: 28px;
+                    }
+                }
+            }
+            & h1 {
+                font-size: 45px;
+                line-height: 60px;
+                margin-top: 20px;
+            }
+            &_description {
+                font-size: 16px;
+                line-height: 28px;
+                width: 598px;
+                margin-top: 7px;
+            }
+        }
+    }
+}
