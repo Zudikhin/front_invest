@@ -1,0 +1,242 @@
+.idea {
+    margin-top: 100px;
+    & h2 {
+        font-family: 'RF Tone';
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 60px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    &_slider {
+        &_item {
+            box-sizing: border-box;
+            background: #1A1928;
+            border-radius: 30px;
+            padding: 30px;
+            margin: 0px 10px;
+            &_top {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                &_tabs {
+                    display: flex;
+                    align-items: center;
+                    &_item {
+                        box-sizing: border-box;
+                        padding: 5px 10px;
+                        background: rgba(255, 255, 255, 0.24);
+                        border-radius: 10px;
+                        margin-left: 10px;
+                        & span {
+                            font-family: 'RF Tone';
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+            & h4 {
+                font-family: 'RF Tone';
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 35px;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+                margin-top: 15px;
+            }
+            &_text {
+                font-family: 'RF Tone';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 28px;
+                color: #FFFFFF;
+                margin-top: 10px;
+            }
+            &_sum {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                margin-top: 14px;
+                &_item {
+                    display: flex;
+                    flex-direction: column;
+                    & span {
+                        font-family: 'RF Tone';
+                        font-weight: 400;
+                        font-size: 10px;
+                        line-height: 12px;
+                        color: #CBCCD0;
+                        display: block;
+                    }
+                    & p {
+                        font-family: 'RF Tone';
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #FFFFFF;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            &_stage {
+                margin-top: 50px;
+                & span {
+                    font-family: 'RF Tone';
+                    font-weight: 400;
+                    font-size: 10px;
+                    line-height: 12px;
+                    color: #CBCCD0;
+                }
+                &_line {
+                    display: none;
+                }
+            }
+            &_btn {
+                height: 50px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #2E00E4;
+                border-radius: 10px;
+                margin-top: 30px;
+                & span {
+                    font-family: 'RF Tone';
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+    &_list {
+        display: none;
+    }
+    @media (min-width: 1200px) {
+        margin-top: 0px;
+        & h2 {
+            text-align: left;
+            font-size: 40px;
+            line-height: 40px;
+        }
+        &_slider {
+            display: none !important;
+        }
+        &_list {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            align-items: flex-start;
+            margin-top: 50px;
+            &_item {
+                box-sizing: border-box;
+                background: #1A1928;
+                border-radius: 30px;
+                padding: 30px;
+                width: calc(100%/3 - 20px);
+                &_top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    &_tabs {
+                        display: flex;
+                        align-items: center;
+                        &_item {
+                            box-sizing: border-box;
+                            padding: 5px 10px;
+                            background: rgba(255, 255, 255, 0.24);
+                            border-radius: 10px;
+                            margin-left: 10px;
+                            & span {
+                                font-family: 'RF Tone';
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 19px;
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+                }
+                & h4 {
+                    font-family: 'RF Tone';
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 35px;
+                    letter-spacing: 0.02em;
+                    color: #FFFFFF;
+                    margin-top: 30px;
+                }
+                &_text {
+                    font-family: 'RF Tone';
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 28px;
+                    color: #FFFFFF;
+                    margin-top: 10px;
+                }
+                &_sum {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    margin-top: 30px;
+                    &_item {
+                        display: flex;
+                        flex-direction: column;
+                        & span {
+                            font-family: 'RF Tone';
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 14px;
+                            color: #CBCCD0;
+                            display: block;
+                        }
+                        & p {
+                            font-family: 'RF Tone';
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 24px;
+                            color: #FFFFFF;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+                &_stage {
+                    margin-top: 50px;
+                    & span {
+                        font-family: 'RF Tone';
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #CBCCD0;
+                    }
+                    &_line {
+                        display: none;
+                    }
+                }
+                &_btn {
+                    height: 45px;
+                    width: 210px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #2E00E4;
+                    border-radius: 10px;
+                    margin-top: 30px;
+                    & span {
+                        font-family: 'RF Tone';
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
