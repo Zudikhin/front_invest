@@ -2,18 +2,17 @@ $(document).ready(function () {
     "use strict";
 
     $(".nav_mobile_top_btn").click(function() {
-        $(this).toggleClass("active");
-        $(".nav_mobile_drop").toggleClass("active");
+      $(this).toggleClass("active");
+      $(".nav_mobile_drop").toggleClass("active");
     });
 
-    // $('.idea_slider').slick({
-    //     dots: true,
-    //     infinite: true,
-    //     arrows: false,
-    //     speed: 500,
-    //     fade: true,
-    //     cssEase: 'linear'
-    // });
+    $(".time_block_form_open").click(function() {
+      $(".time_block_form").addClass("active");
+    });
+
+    $(".time_block_form_close").click(function() {
+      $(".time_block_form").removeClass("active");
+    });
 
     $('.idea_slider').slick({
         dots: true,

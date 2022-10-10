@@ -1,0 +1,167 @@
+// @keyframes animatedToBottom {
+//     from { transform: translateY(0); }
+//     to { transform: translateY(-50%); }
+// }
+
+@keyframes marqueeTop {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+      }
+      100% {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0)
+      }
+}
+
+
+@keyframes marqueeBottom {
+    0% {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0)
+      }
+      100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+      }
+  }
+
+.unicorn {
+    box-sizing: border-box;
+    position: relative;
+    &_block {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        &_right {
+            position: relative;
+            display: flex;
+            order: 1;
+            height: 458px;
+            overflow-y: hidden;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 80px;
+                background: linear-gradient(360deg, #070613 0%, rgba(7, 6, 19, 0) 100%);
+                z-index: 2;
+                transform: matrix(1, 0, 0, -1, 0, 0);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                width: 100%;
+                height: 80px;
+                background: linear-gradient(360deg, #070613 0%, rgba(7, 6, 19, 0) 100%);
+                z-index: 2;
+            }
+            &_row {
+                width: 50%;
+                position: relative;
+                &_wrap {
+                    &_first {
+                        animation: marqueeTop 22s linear infinite;
+                    }
+                    &_second {
+                        animation: marqueeBottom 22s linear infinite;
+                    }
+                }
+                & img {
+                    width: 100%;
+                    max-width: 295px;
+                }
+            }
+        }
+        &_left {
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            & p {
+                font-family: 'RF Tone';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 30px;
+                text-align: center;
+                color: #FFFFFF;
+                margin-top: 20px;
+            }
+            &_btns {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                margin-top: 32px;
+                & a {
+                    box-sizing: border-box;
+                    width: calc(100% - 64px);
+                    border: 1px solid #A6A6A6;
+                    display: flex;
+                    height: 52px;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+                }
+                &_qr {
+                    width: 52px;
+                    height: 52px;
+                    box-sizing: border-box;
+                    border: 1px solid #A6A6A6;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    @media (min-width: 576px) {
+        &_block {
+            &_left {
+                &_btns {
+                    justify-content: flex-start;
+                    & a {
+                        width: 168px;
+                        height: 52px;
+                    }
+                    &_qr {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_block {
+            flex-direction: row;
+            align-items: center;
+            &_left {
+                order: 1;
+                align-items: flex-start;
+                width: 514px;
+                min-width: 514px;
+                & p {
+                    text-align: left;
+                    font-size: 18px;
+                    line-height: 30px;
+                    margin-top: 40px;
+                }
+                &_btns {
+                    margin-top: 40px;
+                }
+            }
+            &_right {
+                order: 2;
+                margin-left: 250px;
+            }
+        }
+    }
+}
