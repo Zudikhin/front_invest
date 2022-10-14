@@ -59,24 +59,37 @@
             z-index: 2;
         }
         &_item {
-            width: 210px;
-            margin: 0px 15px;
+            min-width: 100px;
+            margin: 0px 7.5px;
             & img {
-                margin-top: 30px;
+                width: 100%;
+                margin-top: 15px;
             }
             &:nth-child(even) {
                 & .leaders_row_item_wrap {
-                    animation: marqueeTopLead 42s linear infinite;
+                    animation: marqueeTopLead 52s linear infinite;
                 }
             }
             &:nth-child(odd) {
                 & .leaders_row_item_wrap {
-                    animation: marqueeBottomLead 42s linear infinite;
+                    animation: marqueeBottomLead 52s linear infinite;
                 }
             }
         }
     }
     &_block {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(7, 6, 19, 0.46);
+            width: 287.64px;
+            height: 262.12px;
+            filter: blur(43.2536px);
+        }
         & h2 {
             font-family: 'RF Tone';
             font-weight: 600;
@@ -85,6 +98,8 @@
             text-align: center;
             color: #FFFFFF;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            position: relative;
+            z-index: 3;
         }
     }
     @media (min-width: 768px) {
@@ -95,10 +110,31 @@
         position: relative;
     }
     @media (min-width: 1200px) {
+        &_row {
+            &_item {
+                margin: 0px 30px;
+                & img {
+                    margin-top: 30px;
+                }
+            }
+        }
         &_block {
+            &::after {
+                width: 697px;
+                height: 551px;
+            }
             & h2 {
                 font-size: 40px;
                 line-height: 45px;
+            }
+        }
+    }
+    @media (min-width: 1920px) {
+        &_row {
+            &_item {
+                & img {
+                    margin-top: 45px;
+                }
             }
         }
     }

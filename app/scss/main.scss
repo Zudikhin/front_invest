@@ -2,9 +2,10 @@
     position: relative;
     box-sizing: border-box;
     height: 100vh;
-    background: url(../img/main/back.png);
-    background-position: 50% 100px;
-    background-size: cover;
+    background: url(../img/main/back_mob.png);
+    background-position: 0px 70px;
+    background-size: 442px;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,9 +126,17 @@
         height: 200px;
         width: 100%;
     }
-    @media (min-width: 1200px) {
-        background-size: 1120px;
+    @media (min-width: 576px) {
+        background: url(../img/main/back.png);
+        background-size: cover;
+        background-position: 50% 50%;
         background-repeat: no-repeat;
+    }
+    @media (min-width: 1200px) {
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height: 630px;
         &::after {
             top: 176px;
         }
@@ -135,8 +144,9 @@
             &_under {
                 &_title {
                     & p {
-                        font-size: 14px;
-                        line-height: 28px;
+                        font-size: 19px;
+                        line-height: 37px;
+                        margin-left: 10px;
                     }
                 }
             }
@@ -148,8 +158,8 @@
             &_description {
                 font-size: 16px;
                 line-height: 28px;
-                width: 598px;
-                margin-top: 7px;
+                width: 644px;
+                margin-top: 10px;
             }
             & form {
                 flex-direction: row;
@@ -161,6 +171,9 @@
                     font-size: 12px;
                     line-height: 14px;
                     margin-top: 70px;
+                    & input {
+                        font-size: 16px;
+                    }
                     & .country {
                         top: 44px;
                     }
@@ -169,6 +182,50 @@
                     width: 258px;
                     height: 60px;
                     margin-top: 0px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1920px) {
+        background: url(../img/main/back.png);
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height: 840px;
+        &_block {
+            &_under_title {
+                font-size: 19px;
+                line-height: 37px;
+                & p {
+                    margin-left: 15px;
+                }
+            }
+            & h1 {
+                font-size: 60px;
+                line-height: 80px;
+            }
+            &_description {
+                font-size: 21px;
+                line-height: 37px;
+                width: 810px;
+            }
+            & form {
+                width: 750px;
+                & label {
+                    font-size: 16px;
+                    line-height: 19px;
+                    width: 393px;
+                    & .country {
+                        top: 52px;
+                    }
+                    & input {
+                        margin-top: 13px;
+                    }
+                }
+                & button {
+                    width: 344px;
+                    font-size: 20px;
                 }
             }
         }
