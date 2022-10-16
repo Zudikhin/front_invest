@@ -13,21 +13,24 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 15px;
             & li {
                 margin-left: 5px;
+                width: 5px;
+                height: 4px;
+                background: rgba(255, 255, 255, 0.67);
+                border-radius: 10px;
                 & button {
-                    width: 5px;
-                    height: 4px;
-                    background: rgba(255, 255, 255, 0.67);
-                    border-radius: 10px;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    opacity: 0;
                 }
                 &.slick-active {
-                    & button {
-                        width: 34px;
-                        height: 4px;
-                        background: rgba(255, 255, 255, 0.78);
-                        border-radius: 10px;
-                    }
+                    width: 34px;
+                    height: 4px;
+                    background: rgba(255, 255, 255, 0.78);
+                    border-radius: 10px;
                 }
             }
         }
@@ -114,7 +117,21 @@
                     color: #CBCCD0;
                 }
                 &_line {
-                    display: none;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    & img {
+                        width: calc(100% - 51px);
+                        max-width: 236px;
+                    }
+                    & p {
+                        font-family: 'RF Tone';
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #FFFFFF;
+                        margin-left: 10px;
+                    }
                 }
             }
             &_btn {

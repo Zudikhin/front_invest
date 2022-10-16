@@ -1,8 +1,3 @@
-// @keyframes animatedToBottom {
-//     from { transform: translateY(0); }
-//     to { transform: translateY(-50%); }
-// }
-
 @keyframes marqueeTop {
     0% {
         -webkit-transform: translate3d(0, 0, 0);
@@ -13,7 +8,6 @@
         transform: translate3d(0, -100%, 0)
       }
 }
-
 
 @keyframes marqueeBottom {
     0% {
@@ -73,7 +67,7 @@
                 }
                 & img {
                     width: 100%;
-                    max-width: 295px;
+                    max-width: 399px;
                 }
             }
         }
@@ -131,6 +125,7 @@
                     box-sizing: border-box;
                     padding: 18px;
                     margin-left: 10px;
+                    cursor: pointer;
                     &.active {
                         display: block;
                     }
@@ -175,7 +170,34 @@
             }
             &_right {
                 order: 2;
+                margin-left: 100px;
+            }
+        }
+    }
+    @media (min-width: 1536px) {
+        &_block {
+            &_left {
+                min-width: 575px;
+                width: 575px;
+                & p {
+                    font-size: 20px;
+                    line-height: 36px;
+                }
+            }
+            &_right {
                 margin-left: 150px;
+            }
+        }
+    }
+    @media (min-width: 1920px) {
+        &_block {
+            &_left {
+                min-width: 687px;
+                width: 687px;
+                & p {
+                    font-size: 24px;
+                    line-height: 40px;
+                }
             }
         }
     }

@@ -34,7 +34,7 @@
             font-size: 16px;
             line-height: 19px;
             color: #FFFFFF;
-            margin-top: 40px;
+            margin-top: 30px;
         }
         &_block {
             display: flex;
@@ -96,7 +96,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 50px;
+            margin-top: 25px;
             & a {
                 width: 64px;
                 height: 64px;
@@ -107,6 +107,14 @@
                 background: rgba(255, 255, 255, 0.2);
                 border-radius: 12px;
             }
+        }
+        &_description {
+            font-family: 'RF Tone';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFFFFF;
+            margin-top: 10px;
         }
         & h4 {
             font-family: 'RF Tone';
@@ -148,6 +156,28 @@
             line-height: 17px;
             color: #FFFFFF;
             margin-top: 20px;
+        }
+        &_mail {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            &_icon {
+                width: 30px;
+                height: 30px;
+                background: #5D5E60;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            & p {
+                font-family: 'RF Tone';
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                color: #FFFFFF;
+                margin-left: 10px;
+            }
         }
     }
     &_desktop {
