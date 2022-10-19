@@ -69,6 +69,9 @@
                     color: #FFFFFF;
                     margin-left: 10px;
                 }
+                & img {
+                    width: 26px;
+                }
             }
         }
         &_nav {
@@ -118,6 +121,11 @@
         height: 80px;
         &_block {
             &_left {
+                &_logo {
+                    & img {
+                        width: 28px;
+                    }
+                }
                 &_btn {
                     display: none;
                 }
@@ -135,21 +143,21 @@
                     display: flex;
                     align-items: center;
                     & li {
-                        margin-left: 40px;
+                        margin-left: 45px;
                         height: 80px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         & a {
                             font-family: 'RF Tone';
-                            font-weight: 600;
+                            font-weight: 400;
                             font-size: 16px;
                             line-height: 19px;
                             color: #CBCCD0;
                         }
                         & span {
                             font-family: 'RF Tone';
-                            font-weight: 600;
+                            font-weight: 400;
                             font-size: 16px;
                             line-height: 19px;
                             color: #CBCCD0;
@@ -173,7 +181,7 @@
                     align-items: center;
                     box-sizing: border-box;
                     padding: 10px 20px;
-                    border: 1px solid #C2C2C2;
+                    border: 1px solid rgba(133, 133, 133, 0.46);
                     border-radius: 10px;
                     & img {
                         margin-right: 10px;
@@ -181,7 +189,7 @@
                     & span {
                         font-family: 'RF Tone';
                         font-style: normal;
-                        font-weight: 400;
+                        font-weight: 300;
                         font-size: 16px;
                         line-height: 19px;
                         color: #FFFFFF;
@@ -191,7 +199,7 @@
                     display: flex;
                     align-items: center;
                     box-sizing: border-box;
-                    border: 1px solid #C2C2C2;
+                    border: 1px solid rgba(133, 133, 133, 0.46);
                     border-radius: 10px;
                     padding: 10px 20px;
                     margin-left: 10px;
@@ -199,13 +207,21 @@
                         display: block;
                         margin-right: 8px;
                     }
+                    & span {
+                        font-family: 'RF Tone';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #FFFFFF;
+                    }
                 }
                 &_qr {
                     box-sizing: border-box;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    border: 1px solid #C2C2C2;
+                    border: 1px solid rgba(133, 133, 133, 0.46);
                     border-radius: 10px;
                     padding: 10px;
                     margin-left: 10px;
@@ -215,7 +231,7 @@
                         position: absolute;
                         left: 50%;
                         transform: translateX(-50%);
-                        top: -1px;
+                        top: 50px;
                         background: #201F2B;
                         box-shadow: 10px 14px 80px rgba(0, 0, 0, 0.47);
                         border-radius: 20px;
@@ -250,6 +266,7 @@
                 &_login {
                     width: 50px;
                     height: 50px;
+                    margin-left: 20px;
                     & img {
                         width: auto;
                     }
@@ -267,8 +284,31 @@
     @media (min-width: 1536px) {
         &_block {
             &_nav {
+                & ul {
+                    & li {
+                        margin-left: 60px;
+                    }
+                }
+            }
+            &_left {
+                &_logo {
+                    & img {
+                        width: 38px;
+                    }
+                }
+            }
+            &_nav {
                 & li {
                     margin-left: 80px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1920px) {
+        &_block {
+            &_right {
+                &_login {
+                    margin-left: 70px;
                 }
             }
         }
@@ -284,36 +324,28 @@
     left: 50%;
     transform: translateX(-50%);
     top: 80px;
-    width: 1140px;
+    width: calc(100% - 240px);
+    max-width: 1600px;
     background: #22222B;
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
     display: none;
+    align-items: flex-start;
     justify-content: space-between;
+    &_line {
+        height: 174px;
+        width: 1px;
+        min-width: 1px;
+        background-color: #fff;
+    }
     &_left {
         position: relative;
-        &::after {
-            content: "";
-            width: 1px;
-            height: 184px;
-            background-color: #FFFFFF;
-            position: absolute;
-            right: 52px;
-            top: -9px;
-        }
+        width: 254px;
     }
     &_mid {
         position: relative;
-        &::after {
-            content: "";
-            width: 1px;
-            height: 184px;
-            background-color: #FFFFFF;
-            position: absolute;
-            right: 52px;
-            top: -9px;
-        }
+        width: 280px;
     }
     &_text {
         font-family: 'RF Tone';
@@ -356,6 +388,9 @@
         height: 40px;
         width: 207px;
         margin-top: 20px;
+        & img {
+            margin-right: 5px;
+        }
         & span {
             font-family: 'RF Tone';
             font-weight: 400;

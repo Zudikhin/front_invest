@@ -23,6 +23,9 @@
 .unicorn {
     box-sizing: border-box;
     position: relative;
+    &_back {
+        display: none;
+    }
     &_block {
         display: flex;
         flex-direction: column;
@@ -30,6 +33,7 @@
         &_right {
             position: relative;
             display: flex;
+            justify-content: space-between;
             order: 1;
             height: 458px;
             overflow-y: hidden;
@@ -55,19 +59,20 @@
                 z-index: 2;
             }
             &_row {
-                width: 50%;
+                width: calc(50% - 10px);
                 position: relative;
                 &_wrap {
                     &_first {
-                        animation: marqueeTop 22s linear infinite;
+                        animation: marqueeTop 42s linear infinite;
                     }
                     &_second {
-                        animation: marqueeBottom 22s linear infinite;
+                        animation: marqueeBottom 42s linear infinite;
                     }
                 }
                 & img {
                     width: 100%;
                     max-width: 399px;
+                    margin-top: 20px;
                 }
             }
         }
@@ -77,38 +82,52 @@
             flex-direction: column;
             align-items: center;
             margin-top: 20px;
+            &_logo {
+                display: flex;
+                align-items: center;
+                &_icon {
+                    width: 50px;
+                }
+                &_text {
+                    width: 210px;
+                    margin-left: 15px;
+                }
+            }
             & p {
                 font-family: 'RF Tone';
-                font-weight: 400;
-                font-size: 14px;
+                font-weight: 300;
+                font-size: 12px;
                 line-height: 30px;
                 text-align: center;
                 color: #FFFFFF;
-                margin-top: 20px;
+                margin-top: 13px;
             }
             &_btns {
                 position: relative;
                 display: flex;
                 align-items: flex-start;
-                justify-content: space-between;
+                justify-content: center;
                 width: 100%;
                 margin-top: 32px;
                 & a {
                     box-sizing: border-box;
-                    width: calc(100% - 64px);
+                    width: 200px;
                     border: 1px solid #A6A6A6;
                     display: flex;
                     height: 52px;
                     align-items: center;
                     justify-content: center;
                     border-radius: 10px;
+                    & img {
+                        width: 102px;
+                    }
                 }
                 &_qr {
                     width: 52px;
                     height: 52px;
                     box-sizing: border-box;
                     border: 1px solid #A6A6A6;
-                    display: flex;
+                    display: none;
                     align-items: center;
                     justify-content: center;
                     border-radius: 10px;
@@ -133,23 +152,8 @@
             }
         }
     }
-    @media (min-width: 576px) {
-        &_block {
-            &_left {
-                &_btns {
-                    justify-content: flex-start;
-                    & a {
-                        width: 168px;
-                        height: 52px;
-                    }
-                    &_qr {
-                        margin-left: 10px;
-                    }
-                }
-            }
-        }
-    }
     @media (min-width: 1200px) {
+        position: relative;
         &_block {
             flex-direction: row;
             align-items: center;
@@ -158,6 +162,15 @@
                 align-items: flex-start;
                 width: 514px;
                 min-width: 514px;
+                &_logo {
+                    &_icon {
+                        width: 64px;
+                    }
+                    &_text {
+                        width: 210px;
+                        margin-left: 22px;
+                    }
+                }
                 & p {
                     text-align: left;
                     font-size: 18px;
@@ -166,11 +179,32 @@
                 }
                 &_btns {
                     margin-top: 40px;
+                    justify-content: flex-start;
+                    position: relative;
+                    & a {
+                        width: 166px;
+                        & img {
+                            width: 124px;
+                        }
+                    }
+                    &_qr {
+                        display: flex;
+                        margin-left: 10px;
+                        &_big {
+                            position: absolute;
+                            left: 166px;
+                            & img {
+                                width: 100px;
+                            }
+                        }
+                    }
                 }
             }
             &_right {
                 order: 2;
                 margin-left: 100px;
+                position: relative;
+                height: 660px;
             }
         }
     }
@@ -194,9 +228,48 @@
             &_left {
                 min-width: 687px;
                 width: 687px;
+                &_logo {
+                    &_icon {
+                        width: auto;
+                    }
+                    &_text {
+                        width: auto;
+                    }
+                }
+                &_btns {
+                    margin-top: 68px;
+                    & a {
+                        width: 222px;
+                        height: 64px;
+                        & img {
+                            width: 150px;
+                        }
+                    }
+                    &_qr {
+                        height: 64px;
+                        width: 64px;
+                        margin-left: 15px;
+                        &_big {
+                            left: 226px;
+                        }
+                        & img {
+                            width: 45px;
+                        }
+                    }
+                }
                 & p {
                     font-size: 24px;
                     line-height: 40px;
+                    margin-top: 52px;
+                }
+            }
+            &_right {
+                height: 880px;
+                &_row {
+                    width: calc(50% - 25px);
+                    & img {
+                        margin-top: 50px;
+                    }
                 }
             }
         }

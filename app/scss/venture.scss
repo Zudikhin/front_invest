@@ -10,14 +10,14 @@
             order: 2;
             & h2 {
                 font-family: 'RF Tone';
-                font-weight: 600;
+                font-weight: 400;
                 font-size: 20px;
                 line-height: 40px;
                 color: #FFFFFF;
             }
             & p {
                 font-family: 'RF Tone';
-                font-weight: 400;
+                font-weight: 300;
                 font-size: 12px;
                 line-height: 30px;
                 color: #FFFFFF;
@@ -34,9 +34,9 @@
                 margin-top: 30px;
                 & span {
                     font-family: 'RF Tone';
-                    font-weight: 600;
-                    font-size: 16px;
-                    line-height: 19px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
                     text-align: center;
                     color: #FFFFFF;
                 }
@@ -49,6 +49,19 @@
             justify-content: center;
             width: 100%;
             margin-top: 46px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                max-width: 456px;
+                height: 269px;
+                background: rgba(125, 131, 255, 0.2);
+                filter: blur(200px);
+            }
             & img {
                 width: 100%;
             }
@@ -63,8 +76,8 @@
                 width: 515px;
                 order: 1;
                 & h2 {
-                    font-size: 40px;
-                    line-height: 40px;
+                    font-size: 36px;
+                    line-height: 50px;
                 }
                 & p {
                     font-size: 18px;
@@ -93,6 +106,7 @@
                 & p {
                     font-size: 24px;
                     line-height: 53px;
+                    margin-top: 26px;
                 }
                 & a {
                     width: 300px;
@@ -102,6 +116,12 @@
                         font-size: 20px;
                         line-height: 24px;
                     }
+                }
+            }
+            &_img {
+                &::after {
+                    width: 608px;
+                    height: 360px;
                 }
             }
         }

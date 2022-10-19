@@ -5,10 +5,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 42px;
+        margin-top: 50px;
         &_title {
             font-family: 'RF Tone';
-            font-weight: 600;
+            font-weight: 400;
             font-size: 20px;
             line-height: 40px;
             text-align: center;
@@ -19,25 +19,23 @@
             }
         }
         &_form {
-            box-sizing: border-box;
-            padding: 0px 20px 30px 20px;
-            background: #1A1928;
-            border-radius: 30px;
             display: flex;
             flex-direction: column;
-            margin-top: 40px;
+            &_back {
+                display: none;
+            }
             & label {
                 font-family: 'RF Tone';
                 font-weight: 400;
                 font-size: 10px;
                 line-height: 12px;
                 color: #FFFFFF;
-                margin-top: 30px;
+                margin-top: 20px;
                 display: flex;
                 flex-direction: column;
                 & input {
                     width: 100%;
-                    height: 60px;
+                    height: 45px;
                     box-sizing: border-box;
                     background: linear-gradient(353.74deg, rgba(255, 255, 255, 0.04) 5.33%, rgba(255, 255, 255, 0) 95.47%);
                     border: 1px solid #FFFFFF;
@@ -47,7 +45,7 @@
                     font-family: 'RF Tone';
                     font-weight: 400;
                     font-size: 14px;
-                    line-height: 60px;
+                    line-height: 45px;
                     letter-spacing: 0.05em;
                     color: #FFFFFF;
                     padding: 0px 20px;
@@ -57,7 +55,7 @@
                     & .country {
                         position: absolute;
                         left: 20px;
-                        top: 46px;
+                        top: 38px;
                         z-index: 2;
                         &::after {
                             content: "";
@@ -76,16 +74,16 @@
                 & .nice-select {
                     margin-top: 12px;
                     background-color: transparent;
-                    height: 60px;
+                    height: 45px;
                     border-radius: 10px;
                     font-family: "RF Tone";
-                    line-height: 60px;
+                    line-height: 45px;
                     &::after {
                         right: 20px;
                     }
                     & .list {
                         width: 100%;
-                        background: #1A1928;
+                        background: #070613;
                         box-sizing: border-box;
                         border: 1px solid #FFFFFF;
                         border-radius: 10px;
@@ -156,22 +154,14 @@
                 order: 2;
             }
             &_text {
-                margin-top: 30px;
                 order: 1;
                 & h2 {
                     font-family: 'RF Tone';
-                    font-weight: 600;
-                    font-size: 20px;
+                    font-weight: 300;
+                    font-size: 14px;
                     line-height: 30px;
+                    text-align: center;
                     color: #FFFFFF;
-                }
-                & p {
-                    font-family: 'RF Tone';
-                    font-weight: 400;
-                    font-size: 12px;
-                    line-height: 30px;
-                    color: #FFFFFF;
-                    margin-top: 10px;
                 }
             }
             &_hidden {
@@ -231,6 +221,14 @@
                 }
 
             }
+            &_fill {
+                font-family: 'RF Tone';
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 30px;
+                color: #FFFFFF;
+                margin-top: 22px;
+            }
             & button[type='submit'] {
                 background: #2E00E4;
                 backdrop-filter: blur(5px);
@@ -238,7 +236,7 @@
                 width: 100%;
                 height: 45px;
                 font-family: 'RF Tone';
-                font-weight: 600;
+                font-weight: 400;
                 font-size: 14px;
                 line-height: 45px;
                 text-align: center;
@@ -260,17 +258,30 @@
             }
         }
     }
+    &_img {
+        display: none;
+    }
     @media (min-width: 1200px) {
-        margin-top: 150px;
+        margin-top: 126px;
         box-sizing: border-box;
+        position: relative;
+        &_img {
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: -200px;
+        }
         &_block {
+            position: relative;
+            z-index: 2;
+            margin-top: 0px;
             &_title {
                 text-align: left;
                 width: auto;
                 margin-left: 0px;
                 margin-right: auto;
-                font-size: 40px;
-                line-height: 40px;
+                font-size: 36px;
+                line-height: 60px;
             }
             &_form {
                 flex-direction: row;
@@ -279,6 +290,13 @@
                 width: 100%;
                 padding: 30px 50px 50px 50px;
                 margin-top: 50px;
+                position: relative;
+                &_back {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    display: block;
+                }
                 & form {
                     order: 1;
                     width: calc(46% - 43px);
@@ -286,13 +304,24 @@
                         margin-top: 20px;
                         font-size: 12px;
                         line-height: 14px;
+                        &.telephone {
+                            & .country {
+                                top: 38px;
+                            }
+                        }
                         & input {
-                            font-size: 16px;
+                            font-size: 15px;
                             margin-top: 10px;
+                            height: 45px;
+                            padding: 0px 20px;
                         }
                     }
                     & .nice-select {
-                        font-size: 16px;
+                        font-size: 15px;
+                        line-height: 45px;
+                        height: 45px;
+                        padding-left: 20px;
+                        padding-right: 35px;
                     }
                 }
                 &_open {
@@ -300,6 +329,9 @@
                 }
                 &_close {
                     margin-top: 30px;
+                    &::after {
+                        bottom: -10px;
+                    }
                 }
                 &_personal {
                     margin-top: 30px !important;
@@ -309,6 +341,7 @@
                     order: 2;
                     width: calc(54% - 43px);
                     margin-top: 20px;
+                    display: none;
                     & h2 {
                         font-size: 24px;
                         line-height: 45px;
@@ -319,8 +352,11 @@
                         margin-top: 20px;
                     }
                 }
+                &_fill {
+                    margin-top: 12px;
+                }
                 & button[type='submit'] {
-                    height: 60px;
+                    height: 45px;
                     font-size: 16px;
                     margin-top: 30px;
                 }
@@ -348,7 +384,7 @@
                         line-height: 19px;
                         &.telephone {
                             & .country {
-                                top: 60px;
+                                top: 52px;
                                 &::after {
                                     height: 37px;
                                     top: -11px;
@@ -357,13 +393,13 @@
                         }
                         & input {
                             font-size: 20px;
-                            height: 80px;
-                            line-height: 80px;
+                            height: 60px;
+                            line-height: 60px;
                             padding: 0px 26px;
                         }
                         & .nice-select {
-                            height: 80px;
-                            line-height: 80px;
+                            height: 60px;
+                            line-height: 60px;
                             font-size: 20px;
                             padding-left: 26px;
                             padding-right: 36px;
@@ -371,7 +407,7 @@
                     }
                 }
                 & button[type='submit'] {
-                    height: 80px;
+                    height: 60px;
                     font-size: 20px;
                 }
                 &_open {
@@ -381,6 +417,15 @@
                     }
                     & img {
                         margin-left: 16px;
+                    }
+                }
+                &_close {
+                    width: 328px;
+                    & span {
+                        font-size: 18px;
+                    }
+                    & img {
+                        margin-right: 16px;
                     }
                 }
                 &_text {
@@ -393,6 +438,10 @@
                         line-height: 40px;
                         margin-top: 28px;
                     }
+                }
+                &_fill {
+                    font-size: 16px;
+                    margin-top: 20px;
                 }
             }
         }

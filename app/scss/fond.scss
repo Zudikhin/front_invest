@@ -21,6 +21,12 @@
                 align-items: center;
                 justify-content: center;
                 margin-top: 10px;
+                & .default {
+                    display: block;
+                }
+                & .hover {
+                    display: none;
+                }
                 &:first-child {
                     & img {
                         width: 91px;
@@ -41,6 +47,14 @@
                         width: 76px;
                     }
                 }
+                &:hover {
+                    & .default {
+                        display: none;
+                    }
+                    & .hover {
+                        display: block;
+                    }
+                }
             }
         }
         &_right {
@@ -49,14 +63,14 @@
             & h3 {
                 font-family: 'RF Tone';
                 font-style: normal;
-                font-weight: 600;
+                font-weight: 400;
                 font-size: 20px;
                 line-height: 40px;
                 color: #FFFFFF;
             }
             & p {
                 font-family: 'RF Tone';
-                font-weight: 400;
+                font-weight: 300;
                 font-size: 12px;
                 line-height: 30px;
                 color: #FFFFFF;
@@ -87,17 +101,24 @@
         margin-top: 90px;
         &_item {
             box-sizing: border-box;
-            border-radius: 16px;
             padding: 30px 20px;
             margin-top: 10px;
-            background: #1A1928;
+            background: transparent;
+            border: 1px solid #2C2B36;
             border-radius: 16px;
+            &:nth-child(3) {
+                padding: 9px 20px 20px 20px;
+            }
+            &:nth-child(4) {
+                padding: 20px 20px 20px 20px;
+            }
             &_num {
                 display: flex;
                 align-items: flex-end;
                 & h4 {
                     font-family: 'RF Tone';
-                    font-weight: 600;
+                    font-style: normal;
+                    font-weight: 400;
                     font-size: 64px;
                     line-height: 60px;
                     letter-spacing: -0.02em;
@@ -110,7 +131,7 @@
                 }
                 & span {
                     font-family: 'RF Tone';
-                    font-weight: 600;
+                    font-weight: 400;
                     font-size: 28px;
                     line-height: 40px;
                     background: linear-gradient(101.6deg, #4A60DB -1.66%, #B2E2E4 29.1%, #E4F5F6 60.77%, #CFC0C3 77.64%), linear-gradient(260.42deg, #FFFFFF 56.34%, rgba(255, 255, 255, 0) 133.46%);
@@ -122,19 +143,19 @@
             }
             &_text {
                 font-family: 'RF Tone';
-                font-weight: 600;
-                font-size: 16px;
+                font-weight: 400;
+                font-size: 14px;
                 line-height: 20px;
                 color: rgba(255, 255, 255, 0.8);
                 margin-top: 15px;
-                width: 260px;
             }
             &_top {
                 display: flex;
                 align-items: flex-end;
                 & span {
                     font-family: 'RF Tone';
-                    font-weight: 600;
+                    font-style: normal;
+                    font-weight: 400;
                     font-size: 64px;
                     line-height: 100px;
                     background: linear-gradient(239.08deg, #4A60DB -5.03%, #B2E2E4 42.74%, #E4F5F6 91.92%, #CFC0C3 118.11%), linear-gradient(256.45deg, #FFFFFF 40.29%, rgba(255, 255, 255, 0) 83.63%);
@@ -143,11 +164,12 @@
                     background-clip: text;
                     text-fill-color: transparent;
                     display: block;
-                    order: 1;
+                    margin: 0px 8px;
                 }
                 & p {
                     font-family: 'RF Tone';
-                    font-weight: 600;
+                    font-style: normal;
+                    font-weight: 400;
                     font-size: 28px;
                     line-height: 40px;
                     background: linear-gradient(101.6deg, #4A60DB -1.66%, #B2E2E4 29.1%, #E4F5F6 60.77%, #CFC0C3 77.64%), linear-gradient(260.42deg, #FFFFFF 56.34%, rgba(255, 255, 255, 0) 133.46%);
@@ -155,8 +177,6 @@
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
                     text-fill-color: transparent;
-                    order: 2;
-                    margin-left: 8px;
                     transform: translateY(-20px);
                 }
             }
@@ -168,15 +188,16 @@
                     font-size: 14px;
                     line-height: 24px;
                     color: rgba(255, 255, 255, 0.8);
-                    width: 212px;
                 }
             }
             &_bottom {
                 display: flex;
                 align-items: flex-end;
+                margin-top: 2px;
                 & h4 {
                     font-family: 'RF Tone';
-                    font-weight: 600;
+                    font-style: normal;
+                    font-weight: 400;
                     font-size: 64px;
                     line-height: 100px;
                     background: linear-gradient(239.08deg, #4A60DB -5.03%, #B2E2E4 42.74%, #E4F5F6 91.92%, #CFC0C3 118.11%), linear-gradient(256.45deg, #FFFFFF 40.29%, rgba(255, 255, 255, 0) 83.63%);
@@ -188,21 +209,21 @@
                 }
                 & span {
                     font-family: 'RF Tone';
-                    font-weight: 600;
-                    font-size: 28px;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 64px;
                     line-height: 100px;
                     background: linear-gradient(239.08deg, #4A60DB -5.03%, #B2E2E4 42.74%, #E4F5F6 91.92%, #CFC0C3 118.11%), linear-gradient(256.45deg, #FFFFFF 40.29%, rgba(255, 255, 255, 0) 83.63%);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
                     text-fill-color: transparent;
-                    transform: translateY(10px);
                 }
             }
             &_title {
                 font-family: 'RF Tone';
-                font-weight: 600;
-                font-size: 32px;
+                font-weight: 400;
+                font-size: 28px;
                 line-height: 40px;
                 background: linear-gradient(101.6deg, #4A60DB -1.66%, #B2E2E4 29.1%, #E4F5F6 60.77%, #CFC0C3 77.64%), linear-gradient(260.42deg, #FFFFFF 56.34%, rgba(255, 255, 255, 0) 133.46%);
                 -webkit-background-clip: text;
@@ -217,7 +238,7 @@
                 }
                 & p {
                     font-family: 'RF Tone';
-                    font-weight: 600;
+                    font-weight: 400;
                     font-size: 14px;
                     line-height: 35px;
                     color: rgba(255, 255, 255, 0.8);
@@ -250,7 +271,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
-            margin-top: 105px;
+            margin-top: 92px;
             &_left {
                 width: 482px;
                 order: 2;
@@ -288,7 +309,7 @@
                 order: 1;
                 margin-top: 0px;
                 & h3 {
-                    font-size: 40px;
+                    font-size: 36px;
                     line-height: 40px;
                 }
                 & p {
@@ -307,47 +328,49 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-top: 130px;
             &_item {
-                padding: 30px;
                 margin-top: 0px;
+                padding: 52px 20px 28px 20px;
+                &_num {
+                    & span {
+                        font-size: 36px;
+                        line-height: 40px;
+                    }
+                }
                 &_text {
-                    font-size: 18px;
-                    line-height: 35px;
-                    margin-top: 0px;
-                    width: 280px;
+                    font-size: 14px;
+                    line-height: 28px;
+                    margin-top: 8px;
                 }
                 &_top {
-                    flex-direction: column;
-                    align-items: flex-start;
                     & span {
-                        order: 1;
                         margin-top: 0px;
-                        font-size: 64px;
-                        line-height: 60px;
+                        font-size: 72px;
+                        margin: 0px 18px;
                     }
                     & p {
-                        order: 2;
-                        margin-left: 0px;
-                        margin-top: 30px;
-                        font-size: 34px;
+                        font-size: 36px;
                         line-height: 40px;
                     }
                 }
                 &_mid {
-                    margin-top: 20px;
+                    margin-top: 38px;
                     & p {
                         font-size: 18px;
                         line-height: 40px;
+                        font-weight: 400;
                     }
                     
                 }
                 &_bottom {
-                    margin-top: 40px;
-                    & span {
-                        font-size: 40px;
+                    margin-top: 30px;
+                    & h4 {
+                        font-size: 72px;
                         line-height: 100px;
-                        transform: translateY(7px);
+                    }
+                    & span {
+                        font-size: 72px;
+                        line-height: 100px;
                     }
                 }
                 &_title {
@@ -371,20 +394,34 @@
                     display: none;
                 }
                 &:first-child {
-                    width: calc(100%/3 - 13px);
+                    width: calc(29% - 8px);
                 }
                 &:nth-child(2) {
-                    width: calc(100%/3 - 13px);
+                    width: calc(32% - 8px);
                 }
                 &:nth-child(3) {
-                    width: calc(100%/3 - 13px);
-                    padding: 30px 30px 0px 30px;
+                    width: calc(39% - 8px);
+                    padding: 35px 20px 35px 20px;
                 }
                 &:nth-child(4) {
                     position: absolute;
                     bottom: 0px;
                     left: 0px;
-                    width: calc(100%*2/3 - 6.5px);
+                    padding: 35px 20px 35px 20px;
+                    width: calc(61% - 4px);
+                }
+            }
+        }
+    }
+    @media (min-width: 1440px) {
+        &_statistics {
+            &_item {
+                &_text {
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+                &_bottom {
+                    margin-top: 35px;
                 }
             }
         }
@@ -403,6 +440,17 @@
                 }
             }
         }
+        &_statistics {
+            &_item {
+                padding: 52px 30px 28px 30px;
+                &:nth-child(3) {
+                    padding: 35px 30px 35px 30px;
+                }
+                &:nth-child(4) {
+                    padding: 35px 30px 35px 30px;
+                }
+            }
+        }
     }
     @media (min-width: 1920px) {
         &_block {
@@ -417,8 +465,24 @@
             }
         }
         &_statistics {
+            margin-top: 130px;
             &_item {
-                padding: 50px;
+                &:first-child {
+                    width: calc(29% - 12px);
+                    padding: 70px 0px 38px 50px;
+                }
+                &:nth-child(2) {
+                    width: calc(32% - 12px);
+                    padding: 70px 0px 38px 50px;
+                }
+                &:nth-child(3) {
+                    width: calc(39% - 12px);
+                    padding: 50px 0px 86px 44px;
+                }
+                &:nth-child(4) {
+                    width: calc(61% - 5px);
+                    padding: 46px 0px 46px 50px;
+                }
                 &_num {
                     & h4 {
                         font-size: 96px;
@@ -428,12 +492,12 @@
                     & span {
                         font-size: 48px;
                         line-height: 53px;
+                        transform: translateY(-10px);
                     }
                 }
                 &_text {
-                    font-size: 24px;
-                    line-height: 46px;
-                    width: 385px;
+                    font-size: 21px;
+                    line-height: 40px;
                     margin-top: 10px;
                 }
                 &_top {
@@ -444,25 +508,25 @@
                     & p {
                         font-size: 48px;
                         line-height: 53px;
-                        margin-top: 20px;
+                        transform: translateY(-30px);
                     }
                 }
                 &_mid {
-                    margin-top: 47px;
+                    margin-top: 30px;
                     & p {
                         font-size: 24px;
                         line-height: 53px;
                     }
                 }
                 &_bottom {
-                    margin-top: 45px;
+                    margin-top: 34px;
                     & h4 {
                         font-size: 96px;
                         line-height: 134px;
                     }
                     & span {
-                        font-size: 54px;
-                        line-height: 134px;
+                        font-size: 96px;
+                        line-height: 133px;
                     }
                 }
                 &_title {
@@ -475,9 +539,6 @@
                         line-height: 47px;
                         width: 524px;
                     }
-                }
-                &:nth-child(3) {
-                    padding: 50px 50px 0px 50px;
                 }
             }
         }

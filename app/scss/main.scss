@@ -1,7 +1,7 @@
 .main {
     position: relative;
     box-sizing: border-box;
-    height: 100vh;
+    padding: 155px 0px 92px 0px;
     background: url(../img/main/back_mob.png);
     background-position: 0px 70px;
     background-size: 442px;
@@ -29,12 +29,18 @@
         }
         & h1 {
             font-family: 'RF Tone';
-            font-weight: 600;
-            font-size: 32px;
-            line-height: 38px;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 34px;
             text-align: center;
             color: #D1D1D3;
-            margin-top: 7px;
+            margin-top: 17px;
+            &.desktop {
+                display: none;
+            }
+            &.mobile {
+                display: block;
+            }
             & span {
                 background: linear-gradient(90.92deg, #A8BCDF 46.92%, #A1BFDD 62.42%, #4566DF 72.88%);
                 -webkit-background-clip: text;
@@ -46,11 +52,11 @@
         &_description {
             font-family: 'RF Tone';
             font-weight: 400;
-            font-size: 14px;
+            font-size: 12px;
             line-height: 24px;
             text-align: center;
             color: #FFFFFF;
-            margin-top: 15px;
+            margin-top: 12px;
         }
         & form {
             display: flex;
@@ -70,7 +76,7 @@
                 & .country {
                     position: absolute;
                     left: 20px;
-                    top: 42px;
+                    top: 36px;
                     z-index: 2;
                     &::after {
                         content: "";
@@ -84,7 +90,7 @@
                 }
                 & input {
                     width: 100%;
-                    height: 60px;
+                    height: 45px;
                     box-sizing: border-box;
                     background: linear-gradient(353.74deg, rgba(255, 255, 255, 0.04) 5.33%, rgba(255, 255, 255, 0) 95.47%);
                     border: 1px solid #FFFFFF;
@@ -93,7 +99,7 @@
                     font-family: 'RF Tone';
                     font-weight: 400;
                     font-size: 14px;
-                    line-height: 60px;
+                    line-height: 45px;
                     letter-spacing: 0.05em;
                     color: #FFFFFF;
                     padding: 0px 20px 0px 105px;
@@ -112,7 +118,7 @@
                 line-height: 45px;
                 text-align: center;
                 color: #FFFFFF;
-                margin-top: 30px;
+                margin-top: 25px;
             }
         }
     }
@@ -132,11 +138,25 @@
         background-position: 50% 50%;
         background-repeat: no-repeat;
     }
+    @media (min-width: 768px) {
+        &_block {
+            & h1 {
+                &.desktop {
+                    display: block;
+                }
+                &.mobile {
+                    display: none;
+                }
+            }
+        }
+    }
     @media (min-width: 1200px) {
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: no-repeat;
+        align-items: flex-end;
         height: 630px;
+        padding: 0px 0px 102px 0px;
         &::after {
             top: 176px;
         }
@@ -144,8 +164,8 @@
             &_under {
                 &_title {
                     & p {
-                        font-size: 19px;
-                        line-height: 37px;
+                        font-size: 14px;
+                        line-height: 28px;
                         margin-left: 10px;
                     }
                 }
@@ -170,19 +190,18 @@
                     width: 295px;
                     font-size: 12px;
                     line-height: 14px;
-                    margin-top: 70px;
+                    margin-top: 54px;
                     & input {
                         font-size: 16px;
                     }
                     & .country {
-                        top: 44px;
+                        top: 38px;
                     }
                 }
                 & button {
                     width: 258px;
-                    height: 60px;
                     margin-top: 0px;
-                    font-size: 15px;
+                    font-size: 16px;
                 }
             }
         }
@@ -193,17 +212,19 @@
         background-position: 50% 50%;
         background-repeat: no-repeat;
         height: 840px;
+        padding: 0px 0px 138px 0px;
         &_block {
             &_under_title {
-                font-size: 19px;
-                line-height: 37px;
                 & p {
                     margin-left: 15px;
+                    font-size: 19px;
+                    line-height: 37px;
                 }
             }
             & h1 {
                 font-size: 60px;
                 line-height: 80px;
+                margin-top: 26px;
             }
             &_description {
                 font-size: 21px;
@@ -216,16 +237,19 @@
                     font-size: 16px;
                     line-height: 19px;
                     width: 393px;
+                    margin-top: 70px;
                     & .country {
                         top: 52px;
                     }
                     & input {
                         margin-top: 13px;
+                        height: 60px;
                     }
                 }
                 & button {
                     width: 344px;
                     font-size: 20px;
+                    height: 60px;
                 }
             }
         }

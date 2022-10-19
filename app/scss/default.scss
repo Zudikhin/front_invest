@@ -1,5 +1,15 @@
 @font-face {
   font-family: 'RF Tone';
+  src: local('RF Tone Light'), local('RF-Tone-Light'),
+      url('../fonts/RFTone-Light.woff2') format('woff2'),
+      url('../fonts/RFTone-Light.woff') format('woff'),
+      url('../fonts/RFTone-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RF Tone';
   src: local('RF Tone Regular'), local('RF-Tone-Regular'),
       url('../fonts/RFTone-Regular.woff2') format('woff2'),
       url('../fonts/RFTone-Regular.woff') format('woff'),
