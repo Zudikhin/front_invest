@@ -293,9 +293,10 @@
                 position: relative;
                 &_back {
                     position: absolute;
-                    left: 0px;
-                    top: 0px;
+                    left: -67px;
+                    top: -48px;
                     display: block;
+                    width: 584px;
                 }
                 & form {
                     order: 1;
@@ -409,6 +410,11 @@
                 & button[type='submit'] {
                     height: 60px;
                     font-size: 20px;
+                }
+                &_back {
+                    width: auto;
+                    left: -133px;
+                    top: -92px;
                 }
                 &_open {
                     width: 272px;
