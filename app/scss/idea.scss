@@ -187,6 +187,8 @@
     }
     @media (min-width: 1200px) {
         margin-top: 20px;
+        box-sizing: border-box;
+        padding-bottom: 43px;
         & h2 {
             text-align: left;
             font-size: 36px;
@@ -207,7 +209,7 @@
                 border-radius: 30px;
                 padding: 30px;
                 width: calc(100%/3 - 12.5px);
-                transition: all 0.2s linear;
+                transition: transform 0.2s linear;
                 transform: translateY(0px);
                 &_top {
                     display: flex;
@@ -329,7 +331,7 @@
                 }
                 &:hover {
                     transform: translateY(-20px);
-                    transition: all 0.2s linear;
+                    transition: transform 0.2s linear;
                 }
             }
         }

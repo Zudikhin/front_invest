@@ -9,12 +9,13 @@
             display: flex;
             align-items: center;
             & img {
-                margin-right: 20px;
+                margin-right: 10px;
+                width: 25px;
             }
             & span {
                 font-family: 'RF Tone';
                 font-weight: 400;
-                font-size: 20px;
+                font-size: 14px;
                 line-height: 28px;
                 color: #FFFFFF;
             }
@@ -34,7 +35,7 @@
             font-size: 16px;
             line-height: 19px;
             color: #FFFFFF;
-            margin-top: 30px;
+            margin-top: 20px;
         }
         &_block {
             display: flex;
@@ -55,8 +56,8 @@
                 & span {
                     font-family: 'RF Tone';
                     font-weight: 400;
-                    font-size: 20px;
-                    line-height: 24px;
+                    font-size: 16px;
+                    line-height: 19px;
                     color: #FFFFFF;
                 }
             }
@@ -111,25 +112,25 @@
         &_description {
             font-family: 'RF Tone';
             font-weight: 400;
-            font-size: 16px;
-            line-height: 20px;
+            font-size: 14px;
+            line-height: 17px;
             color: #FFFFFF;
             margin-top: 10px;
         }
         & h4 {
             font-family: 'RF Tone';
             font-weight: 400;
-            font-size: 24px;
-            line-height: 29px;
+            font-size: 20px;
+            line-height: 24px;
             color: #FFFFFF;
-            margin-top: 50px;
+            margin-top: 38px;
         }
         &_nav {
             & li {
                 margin-top: 25px;
                 & a {
                     font-family: 'RF Tone';
-                    font-weight: 600;
+                    font-weight: 400;
                     font-size: 16px;
                     line-height: 19px;
                     color: #CBCCD0;
@@ -180,9 +181,9 @@
             }
             & p {
                 font-family: 'RF Tone';
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 24px;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
                 color: #FFFFFF;
                 margin-left: 10px;
             }
@@ -217,7 +218,7 @@
                 justify-content: center;
                 border-radius: 10px;
                 cursor: pointer;
-                margin-left: 25px;
+                margin-left: 10px;
                 & img {
                     width: 50px;
                 }
@@ -769,7 +770,7 @@
             cursor: pointer;
             & span {
                 font-family: 'RF Tone';
-                font-weight: 600;
+                font-weight: 400;
                 font-size: 14px;
                 line-height: 17px;
                 color: #FFFFFF;
@@ -789,7 +790,7 @@
             display: none;
             & span {
                 font-family: 'RF Tone';
-                font-weight: 600;
+                font-weight: 400;
                 font-size: 14px;
                 line-height: 17px;
                 color: #FFFFFF;
