@@ -1,0 +1,124 @@
+.about_main {
+    position: relative;
+    box-sizing: border-box;
+    padding: 394px 0px 0px 0px;
+    &_block {
+        & h2 {
+            font-family: 'RF Tone';
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 35px;
+            text-align: center;
+            color: #FFFFFF;
+            width: 320px;
+            margin: 0 auto;
+            & span {
+                font-size: 18px;
+                line-height: 35px;
+            }
+        }
+        &_list {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            margin-top: 50px;
+            & img {
+                margin-left: 20px;
+                &:first-child {
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+    &_quotes {
+        position: relative;
+        box-sizing: border-box;
+        padding: 0px 15px;
+        margin-top: 80px;
+        &::after {
+            content: "«";
+            position: absolute;
+            left: 0px;
+            top: -44px;
+            font-family: 'RF Tone';
+            font-weight: 300;
+            font-size: 96px;
+            line-height: 20px;
+            font-feature-settings: 'kern' off;
+            color: #5226FF;
+        }
+        &::before {
+            content: "»";
+            position: absolute;
+            right: 0px;
+            bottom: -34px;
+            font-family: 'RF Tone';
+            font-weight: 300;
+            font-size: 96px;
+            line-height: 20px;
+            font-feature-settings: 'kern' off;
+            color: #5226FF;
+        }
+
+        & p {
+            font-family: 'RF Tone';
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 33px;
+            color: #FFFFFF;
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 330px 0px 0px 0px;
+        &_block {
+            & h2 {
+                width: 504px;
+                font-size: 40px;
+                line-height: 35px;
+                & span {
+                    font-size: 20px;
+                    line-height: 35px;
+                }
+            }
+            &_list {
+                margin-top: 40px;
+            }
+        }
+        &_quotes {
+            & p {
+                text-align: center;
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        padding: 364px 0px 0px 0px;
+        &_block {
+            & h2 {
+                width: auto;
+                font-size: 48px;
+                line-height: 57px;
+                & span {
+                    font-size: 40px;
+                    line-height: 57px;
+                }
+            }
+        }
+        &_quotes {
+            width: 842px;
+            margin: 0 auto;
+            margin-top: 48px;
+            & p {
+                font-size: 16px;
+                line-height: 35px;
+            }
+            &::after {
+                top: 0px;
+                left: -30px;
+            }
+            &::before {
+                bottom: 20px;
+                right: -40px;
+            }
+        }
+    }
+}

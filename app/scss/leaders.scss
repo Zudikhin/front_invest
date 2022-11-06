@@ -26,6 +26,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-top: -1px;
     &_row {
         position: absolute;
         width: 100%;
@@ -110,12 +111,12 @@
     @media (min-width: 1200px) {
         &_row {
             box-sizing: border-box;
-            padding: 0px 100px;
-            max-width: 1600px;
+            padding: 0px 0px;
+            max-width: 1200px;
             &_item {
-                margin: 0px 20px;
+                margin: 0px 19px;
                 & img {
-                    margin-top: 40px;
+                    margin-top: 38px;
                 }
             }
         }
@@ -132,7 +133,6 @@
     }
     @media (min-width: 1920px) {
         &_row {
-            padding: 0px 0px;
             &_item {
                 & img {
                     margin-top: 45px;

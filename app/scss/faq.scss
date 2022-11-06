@@ -1,0 +1,115 @@
+.faq {
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    &_block {
+        & h2 {
+            font-family: "RF Tone";
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 60px;
+            color: #FFFFFF;
+        }
+        &_list {
+            &_item {
+                box-sizing: border-box;
+                background: #1A1928;
+                border-radius: 10px;
+                padding: 0px 15px;
+                margin-top: 20px;
+                &_top {
+                    box-sizing: border-box;
+                    padding: 25px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    cursor: pointer;
+                    & h3 {
+                        width: calc(100% - 50px);
+                        font-family: 'RF Tone';
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 30px;
+                        color: #FFFFFF;
+                    }
+                    &_btn {
+                        transform: rotate(0deg);
+                        transition: transform 0.3s linear;
+                    }
+                }
+                &_body {
+                    display: none;
+                    box-sizing: border-box;
+                    padding-bottom: 25px;
+                    & p {
+                        font-family: 'RF Tone';
+                        font-weight: 300;
+                        font-size: 12px;
+                        line-height: 24px;
+                        color: #FFFFFF;
+                    }
+                }
+                &.active {
+                    & .faq_block_list_item_top {
+                        &_btn {
+                            transform: rotate(90deg);
+                            transition: transform 0.3s linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 120px 0px 0px 0px;
+        &_block {
+            & h2 {
+                font-size: 36px;
+                line-height: 50px;
+            }
+            &_list {
+                &_item {
+                    &_top {
+                        & h3 {
+                            font-size: 16px;
+                            line-height: 30px;
+                        }
+                    }
+                    &_body {
+                        & p {
+                            font-size: 12px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_block {
+            & h2 {
+                font-size: 36px;
+                line-height: 60px;
+            }
+            &_list {
+                &_item {
+                    padding: 0px 30px;
+                    &_top {
+                        & h3 {
+                            font-size: 18px;
+                            line-height: 30px;
+                        }
+                    }
+                    &_body {
+                        & p {
+                            font-size: 16px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

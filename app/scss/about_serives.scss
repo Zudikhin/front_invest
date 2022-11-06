@@ -1,0 +1,17 @@
+.about_serives_block_list_item {
+    position: relative;
+    background-color: #070613;
+    border-radius: 34px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        bottom: -2px;
+        left: -2px;
+        right: -2px;
+        background: linear-gradient(144.64deg, rgba(74, 96, 219, 0.3) -6.67%, rgba(178, 226, 228, 0.3) 11.77%, rgba(228, 245, 246, 0) 39.86%, rgba(207, 192, 195, 0) 52.43%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));;
+        border-radius: 34px;
+        z-index: -1;
+    }
+}

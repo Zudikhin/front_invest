@@ -166,8 +166,8 @@
             &_left {
                 order: 1;
                 align-items: flex-start;
-                width: 514px;
-                min-width: 514px;
+                width: 515px;
+                min-width: 515px;
                 &_logo {
                     &_icon {
                         width: 64px;
@@ -241,57 +241,8 @@
     }
     @media (min-width: 1920px) {
         &_back {
-            width: auto;
+            width: 1000px;
             right: 0px;
-        }
-        &_block {
-            &_left {
-                min-width: 687px;
-                width: 687px;
-                &_logo {
-                    &_icon {
-                        width: auto;
-                    }
-                    &_text {
-                        width: auto;
-                    }
-                }
-                &_btns {
-                    margin-top: 68px;
-                    & a {
-                        width: 222px;
-                        height: 64px;
-                        & img {
-                            width: 150px;
-                        }
-                    }
-                    &_qr {
-                        height: 64px;
-                        width: 64px;
-                        margin-left: 15px;
-                        &_big {
-                            left: 226px;
-                        }
-                        & img {
-                            width: 45px;
-                        }
-                    }
-                }
-                & p {
-                    font-size: 24px;
-                    line-height: 40px;
-                    margin-top: 52px;
-                }
-            }
-            &_right {
-                height: 880px;
-                &_row {
-                    width: calc(50% - 25px);
-                    & img {
-                        margin-top: 50px;
-                    }
-                }
-            }
         }
     }
 }
