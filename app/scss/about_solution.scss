@@ -1,0 +1,167 @@
+.about_solution {
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 150px;
+    & .container {
+        padding: 0px 0px;
+    }
+    &_block {
+        & h2 {
+            font-family: 'RF Tone';
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        & p {
+            font-family: 'RF Tone';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 30px;
+            text-align: center;
+            color: #FFFFFF;
+            margin-top: 28px;
+            box-sizing: border-box;
+            padding: 0px 15px;
+        }
+        &_slider {
+            margin-top: 60px;
+            & .slick-track {
+                display: flex !important;
+                align-items: flex-end;
+            }
+            &_item {
+                margin: 0px 10px;
+                width: 142px !important;
+                &.slick-current {
+                    width: 150px !important;
+                }
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+        &_all {
+            display: none;
+        }
+        &_btns {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+            margin-top: 60px;
+            & a {
+                box-sizing: border-box;
+                width: 168px;
+                border: 1px solid #A6A6A6;
+                display: flex;
+                height: 50px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                & img {
+                    width: 124px;
+                }
+            }
+            &_qr {
+                width: 52px;
+                height: 52px;
+                box-sizing: border-box;
+                border: 1px solid #A6A6A6;
+                opacity: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                cursor: pointer;
+                margin-left: 10px;
+                &.hide {
+                    opacity: 0;
+                }
+            }
+            &_qr_big {
+                display: none;
+                background: #070613;
+                border: 1px solid #A6A6A6;
+                border-radius: 10px;
+                box-sizing: border-box;
+                padding: 18px;
+                margin-left: 10px;
+                cursor: pointer;
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        &_block {
+            & p {
+                width: 500px;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_block {
+            & h2 {
+                text-align: center;
+                font-size: 36px;
+                line-height: 60px;
+            }
+            & p {
+                font-size: 18px;
+                line-height: 45px;
+                margin-top: 20px;
+            }
+            &_slider {
+                display: none;
+            }
+            &_all {
+                display: block;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 100%;
+                    height: 188px;
+                    background: rgba(125, 131, 255, 0.2);
+                    filter: blur(150px);
+                }
+                & img {
+                    width: 100%;
+                }
+            }
+            &_btns {
+                margin-top: 0px;
+                justify-content: flex-start;
+                width: 300px;
+                margin: 0 auto;
+                & a {
+                    width: 166px;
+                    & img {
+                        width: 124px;
+                    }
+                }
+                &_qr {
+                    display: flex;
+                    margin-left: 10px;
+                    &_big {
+                        position: absolute;
+                        left: 166px;
+                        & img {
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

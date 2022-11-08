@@ -29,6 +29,18 @@ $(document).ready(function () {
       }
     });
 
+
+    $(".about_solution_block_btns_qr").click(function() {
+      if ($(window).width() < 1200) {
+        $(".modal_back").addClass("active");
+        $(".modal_qr").addClass("active");
+      } else {
+        $(".about_solution_block_btns_qr_big").addClass("active");
+        $(".about_solution_block_btns_qr").addClass("hide");
+      }
+    });
+
+
     $(".footer_mobile_btns_qr").click(function() {
       $(".modal_back").addClass("active");
       $(".modal_qr").addClass("active");
@@ -101,6 +113,16 @@ $(document).ready(function () {
         ]
     });
 
+    $('.about_solution_block_slider').slick({
+      dots: false,
+      arrows: false,
+      speed: 500,
+      centerMode: true,
+      variableWidth: true,
+      infinite: true,
+      slidesToShow: 3
+    });
+
     $(".faq_block_list_item_top").on("click", function(e) {
       $(".faq_block_list_item_body").slideUp(400);
       if($(this).parent().hasClass("active")) {
@@ -138,5 +160,6 @@ $(document).ready(function () {
         theme:"dark"
       });
     }
+    
 
 });
