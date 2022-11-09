@@ -2,6 +2,14 @@
     box-sizing: border-box;
     position: relative;
     padding-top: 230px;
+    overflow-x: hidden;
+    &_back {
+        width: 980px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 30px;
+    }
     &_block {
         & h2 {
             font-family: 'RF Tone';
@@ -184,8 +192,14 @@
             }
         }
     }
+    @media (min-width: 576px) {
+    }
     @media (min-width: 768px) {
         padding-top: 380px;
+        &_back {
+            width: 1796px;
+            top: 0px;
+        }
         &_block {
             &_list {
                 &_item {
@@ -205,6 +219,7 @@
         }
     }
     @media (min-width: 1200px) {
+        overflow: hidden;
         &_block {
             & h2 {
                 text-align: center;

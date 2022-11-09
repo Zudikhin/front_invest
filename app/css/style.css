@@ -5106,6 +5106,37 @@ input:focus {
   }
 }
 
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(315deg) translateX(0);
+            transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(315deg) translateX(-1000px);
+            transform: rotate(315deg) translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(315deg) translateX(0);
+            transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(315deg) translateX(-1000px);
+            transform: rotate(315deg) translateX(-1000px);
+    opacity: 0;
+  }
+}
 .about_main {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -5184,6 +5215,46 @@ input:focus {
   line-height: 33px;
   color: #FFFFFF;
 }
+.about_main_star_one {
+  position: absolute;
+  right: 50px;
+  top: 250px;
+  z-index: 2;
+  -webkit-animation: animate 3s linear infinite;
+          animation: animate 3s linear infinite;
+}
+.about_main_star_one img {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.about_main_star_two {
+  position: absolute;
+  left: 200px;
+  top: 20px;
+  z-index: 2;
+  -webkit-animation: animate 3s linear infinite;
+          animation: animate 3s linear infinite;
+}
+.about_main_star_two img {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.about_main_star_three {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: none;
+}
+.about_main_back_mob {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 70px;
+}
+.about_main_back_desk {
+  display: none;
+}
 @media (min-width: 768px) {
   .about_main {
     padding: 330px 0px 0px 0px;
@@ -5233,6 +5304,17 @@ input:focus {
   .about_main_quotes::before {
     bottom: 20px;
     right: -40px;
+  }
+  .about_main_back_mob {
+    display: none;
+  }
+  .about_main_back_desk {
+    display: block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: 50px;
   }
 }
 
@@ -5656,6 +5738,15 @@ input:focus {
           box-sizing: border-box;
   position: relative;
   padding-top: 230px;
+  overflow-x: hidden;
+}
+.invest_idea_back {
+  width: 980px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 30px;
 }
 .invest_idea_block h2 {
   font-family: "RF Tone";
@@ -5894,6 +5985,10 @@ input:focus {
   .invest_idea {
     padding-top: 380px;
   }
+  .invest_idea_back {
+    width: 1796px;
+    top: 0px;
+  }
   .invest_idea_block_list_item {
     width: calc(50% - 10px);
     margin-top: 20px;
@@ -5909,6 +6004,9 @@ input:focus {
   }
 }
 @media (min-width: 1200px) {
+  .invest_idea {
+    overflow: hidden;
+  }
   .invest_idea_block h2 {
     text-align: center;
     font-size: 36px;
@@ -6832,16 +6930,28 @@ input:focus {
   0% {
     color: rgba(255, 255, 255, 0.3);
   }
-  100% {
+  10% {
     color: rgb(255, 255, 255);
+  }
+  90% {
+    color: rgb(255, 255, 255);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 @keyframes change-color {
   0% {
     color: rgba(255, 255, 255, 0.3);
   }
-  100% {
+  10% {
     color: rgb(255, 255, 255);
+  }
+  90% {
+    color: rgb(255, 255, 255);
+  }
+  100% {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 .hero_text_block {
@@ -6871,7 +6981,7 @@ input:focus {
   font-family: "RF Tone";
   font-style: normal;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 24px;
   line-height: 50px;
   color: rgba(255, 255, 255, 0.3);
   margin: 0px 20px;
@@ -6879,8 +6989,8 @@ input:focus {
 .hero_text_block_item p.first_word {
   -webkit-animation-name: change-color;
           animation-name: change-color;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-direction: alternate;
@@ -6889,8 +6999,8 @@ input:focus {
           animation-timing-function: ease-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
 }
 
 .footer {
