@@ -331,8 +331,7 @@
     left: 50%;
     transform: translateX(-50%);
     top: 80px;
-    width: calc(100% - 240px);
-    max-width: 1600px;
+    width: 1200px;
     background: #22222B;
     border-radius: 20px;
     padding: 40px;
@@ -470,5 +469,8 @@
                 margin-top: 12px;
             }
         }
+    }
+    @media (min-width: 1440px) {
+        width: 1300px;
     }
 }

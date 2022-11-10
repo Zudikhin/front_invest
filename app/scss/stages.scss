@@ -78,6 +78,7 @@
                     }
                     &::after {
                         background-color: #2E00E4;
+                        transition: background-color 0.3s linear;
                     }
                 }
             }
