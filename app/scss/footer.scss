@@ -394,7 +394,7 @@
                     & h4 {
                         font-family: 'RF Tone';
                         font-weight: 400;
-                        font-size: 18px;
+                        font-size: 20px;
                         line-height: 22px;
                         color: #FFFFFF;
                     }
@@ -665,7 +665,7 @@
                             position: absolute;
                             left: 225px;
                             & img {
-                                width: 80px;
+                                width: 100px;
                             }
                             &.active {
                                 display: block;
@@ -1175,7 +1175,7 @@
     width: 100%;
     background-color: black;
     opacity: 0.7;
-    z-index: 6;
+    z-index: 15;
     display: none;
     &.active {
         display: block;
@@ -1187,7 +1187,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 7;
+    z-index: 16;
     background-color: black;
     box-sizing: border-box;
     padding: 20px;

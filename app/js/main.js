@@ -8,7 +8,16 @@ $(document).ready(function () {
     });
 
     $(document).mouseup(function(e) {
-      $(".header_block_right_qr_big").removeClass("active");
+      var container = $(".header_block_right_qr");
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $(".header_block_right_qr_big").removeClass("active");
+      }
+      $(".footer_desktop_content_left_btns_qr_big").removeClass("active");
+      $(".footer_desktop_content_left_btns_qr").removeClass("hide");
+      $(".unicorn_block_left_btns_qr_big").removeClass("active");
+      $(".unicorn_block_left_btns_qr").removeClass("hide");
+      $(".about_solution_block_btns_qr").removeClass("hide");
+      $(".about_solution_block_btns_qr_big").removeClass("active");
     });
 
     $(".modal_contacts_back").click(function() {
@@ -40,8 +49,18 @@ $(document).ready(function () {
       }
     });
 
+    $(".about_solution_block_btns_qr_big").click(function() {
+      $(this).removeClass("active");
+      $(".about_solution_block_btns_qr").removeClass("hide");
+    });
+
 
     $(".footer_mobile_btns_qr").click(function() {
+      $(".modal_back").addClass("active");
+      $(".modal_qr").addClass("active");
+    });
+
+    $(".drop_down_wrap_block_qr").click(function() {
       $(".modal_back").addClass("active");
       $(".modal_qr").addClass("active");
     });
@@ -67,9 +86,9 @@ $(document).ready(function () {
       $(".header_block_right_qr_big").toggleClass("active");
     });
 
-    $(".header_block_right_qr_big").click(function() {
-      $(this).toggleClass("active");
-    });
+    // $(".header_block_right_qr_big").click(function() {
+    //   $(this).removeClass("active");
+    // });
 
     $(".time_block_form_open").click(function() {
       $(".time_block_form").addClass("active");

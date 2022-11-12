@@ -261,15 +261,32 @@
     &_img {
         display: none;
     }
+    @media (min-width: 768px) {
+        margin-top: 70px;
+        &_block {
+            &_title {
+                width: 100%;
+                font-size: 24px;
+                line-height: 50px;
+            }
+        }
+        &_img {
+            display: block;
+            & img {
+                width: 100%;
+            }
+        }
+    }
     @media (min-width: 1200px) {
         margin-top: 120px;
         box-sizing: border-box;
         position: relative;
         &_img {
-            display: none;
             position: absolute;
             right: 0px;
-            top: -200px;
+            top: 100px;
+            z-index: 12;
+            width: 700px;
         }
         &_block {
             position: relative;
@@ -371,87 +388,23 @@
             }
         }
     }
-    // @media (min-width: 1920px) {
-    //     &_block {
-    //         &_title {
-    //             font-size: 40px;
-    //             line-height: 67px;
-    //         }
-    //         &_form {
-    //             padding: 30px 100px 50px 80px;
-    //             & form {
-    //                 & label {
-    //                     font-size: 16px;
-    //                     line-height: 19px;
-    //                     &.telephone {
-    //                         & .country {
-    //                             top: 52px;
-    //                             &::after {
-    //                                 height: 37px;
-    //                                 top: -11px;
-    //                             }
-    //                         }
-    //                     }
-    //                     & input {
-    //                         font-size: 20px;
-    //                         height: 60px;
-    //                         line-height: 60px;
-    //                         padding: 0px 26px;
-    //                     }
-    //                     & .nice-select {
-    //                         height: 60px;
-    //                         line-height: 60px;
-    //                         font-size: 20px;
-    //                         padding-left: 26px;
-    //                         padding-right: 36px;
-    //                     }
-    //                 }
-    //             }
-    //             & button[type='submit'] {
-    //                 height: 60px;
-    //                 font-size: 20px;
-    //             }
-    //             &_back {
-    //                 width: auto;
-    //                 left: -133px;
-    //                 top: -92px;
-    //             }
-    //             &_open {
-    //                 width: 272px;
-    //                 & span {
-    //                     font-size: 18px;
-    //                 }
-    //                 & img {
-    //                     margin-left: 16px;
-    //                 }
-    //             }
-    //             &_close {
-    //                 width: 328px;
-    //                 & span {
-    //                     font-size: 18px;
-    //                 }
-    //                 & img {
-    //                     margin-right: 16px;
-    //                 }
-    //             }
-    //             &_text {
-    //                 & h2 {
-    //                     font-size: 32px;
-    //                     line-height: 60px;
-    //                 }
-    //                 & p {
-    //                     font-size: 24px;
-    //                     line-height: 40px;
-    //                     margin-top: 28px;
-    //                 }
-    //             }
-    //             &_fill {
-    //                 font-size: 16px;
-    //                 margin-top: 20px;
-    //             }
-    //         }
-    //     }
-    // }
+    @media (min-width: 1440px) {
+        &_img {
+            width: 750px;
+        }
+    }
+    @media (min-width: 1600px) {
+        &_img {
+            right: 10%;
+        }
+    }
+    @media (min-width: 1920px) {
+        &_img {
+            top: 50px;
+            width: auto;
+            right: 0px;
+        }
+    }
 }
 
 .nice-select:active, 
