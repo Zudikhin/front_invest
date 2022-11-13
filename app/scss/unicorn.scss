@@ -209,7 +209,7 @@
             }
             &_right {
                 order: 2;
-                margin-left: 100px;
+                margin-left: 162px;
                 position: relative;
                 height: 660px;
             }
@@ -218,21 +218,6 @@
     @media (min-width: 1440px) {
         &_back {
             right: -200px;
-        }
-    }
-    @media (min-width: 1536px) {
-        &_block {
-            &_left {
-                min-width: 575px;
-                width: 575px;
-                & p {
-                    font-size: 20px;
-                    line-height: 36px;
-                }
-            }
-            &_right {
-                margin-left: 70px;
-            }
         }
     }
     @media (min-width: 1680px) {

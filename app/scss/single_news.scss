@@ -106,10 +106,14 @@
                 &_img {
                     display: none;
                 }
+                &_tabs {
+                    display: none;
+                }
                 &_wrap {
                     box-sizing: border-box;
                     padding-left: 24px;
                     position: relative;
+                    display: block;
                     &::after {
                         content: "";
                         width: 4px;
@@ -235,6 +239,7 @@
                     border-radius: 20px;
                     box-sizing: border-box;
                     width: calc(50% - 10px);
+                    position: relative;
                     &_img {
                         display: block;
                         height: 220px;
@@ -242,23 +247,27 @@
                         box-sizing: border-box;
                         padding: 20px 10px;
                         border-radius: 20px 20px 20px 0px;
-                        &_tabs {
-                            display: flex;
-                            align-items: center;
-                            & a {
-                                box-sizing: border-box;
-                                padding: 0px 15px;
-                                height: 24px;
-                                border: 1px solid #FFFFFF;
-                                backdrop-filter: blur(5px);
-                                border-radius: 90px;
-                                font-family: 'RF Tone';
-                                font-weight: 400;
-                                font-size: 12px;
-                                line-height: 24px;
-                                color: #FFFFFF;
-                                margin-right: 10px;
-                            }
+                    }
+                    &_tabs {
+                        display: flex;
+                        align-items: center;
+                        box-sizing: border-box;
+                        position: absolute;
+                        left: 10px;
+                        top: 20px;
+                        & a {
+                            box-sizing: border-box;
+                            padding: 0px 15px;
+                            height: 24px;
+                            border: 1px solid #FFFFFF;
+                            backdrop-filter: blur(5px);
+                            border-radius: 90px;
+                            font-family: 'RF Tone';
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 24px;
+                            color: #FFFFFF;
+                            margin-right: 10px;
                         }
                     }
                     &_wrap {
@@ -361,6 +370,16 @@
                         & h3 {
                             font-size: 14px;
                             line-height: 20px;
+                        }
+                    }
+                    &_img {
+                        opacity: 1;
+                        transition: opacity 0.3s linear;
+                    }
+                    &:hover {
+                        & .single_news_block_sidebar_item_img {
+                            opacity: 0.5;
+                            transition: opacity 0.3s ease;
                         }
                     }
                 }

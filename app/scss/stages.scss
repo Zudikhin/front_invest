@@ -21,10 +21,10 @@
                     content: "";
                     position: absolute;
                     left: 15px;
-                    height: calc(100% + 18px);
+                    height: 0px;
                     width: 2px;
                     top: 28px;
-                    background: #353535;
+                    background-color: #2E00E4;
                 }
                 &_circle {
                     min-width: 30px;
@@ -77,8 +77,8 @@
                         }
                     }
                     &::after {
-                        background-color: #2E00E4;
-                        transition: background-color 0.3s linear;
+                        height: calc(100% + 18px);
+                        transition: height 0.3s linear;
                     }
                 }
             }
@@ -132,7 +132,6 @@
                     &::after {
                         left: 20px;
                         top: 70px;
-                        height: calc(100% - 15px);
                     }
                     &_circle {
                         min-width: 40px;
@@ -165,6 +164,12 @@
                         }
                         & .stages_block_hero_item_text {
                             margin-right: 50px;
+                        }
+                    }
+                    &.active {
+                        &::after {
+                            height: calc(100% - 15px);
+                            transition: height 0.3s linear;
                         }
                     }
                 }

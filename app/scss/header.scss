@@ -337,19 +337,23 @@
 }
 
 .header_block_nav_company_drop {
-    position: absolute;
+    position: fixed;
     left: 50%;
-    transform: translateX(-50%);
     top: 80px;
     width: 1200px;
+    transform: translateX(-50%);
     background: rgba(7, 6, 19, 0.33);
     backdrop-filter: blur(16.5px);
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
-    display: none;
     align-items: flex-start;
     justify-content: space-between;
+    display: none;
+    z-index: 13;
+    &.active {
+        display: flex;
+    }
     &_line {
         height: 183px;
         width: 1px;
