@@ -1,3 +1,23 @@
+@keyframes animeAboutTrust {
+    0% {
+       opacity: 0;
+       transform: translateY(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
+ 
+ .animation {
+   -webkit-animation-duration: 1s;
+     animation-duration: 1s;
+     -webkit-animation-fill-mode: both;
+     animation-fill-mode: both;
+     animation-name: animeAboutTrust;
+     animation-delay: 0.3s;
+ }
+
 .about_trust {
     box-sizing: border-box;
     margin-top: 45px;
@@ -27,6 +47,7 @@
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
                     text-fill-color: transparent;
+                    opacity: 0;
                 }
                 & p {
                     font-family: 'RF Tone';
@@ -34,6 +55,7 @@
                     font-size: 14px;
                     line-height: 30px;
                     color: #FFFFFF;
+                    opacity: 0;
                 }
                 &:nth-child(even) {
                     & span {

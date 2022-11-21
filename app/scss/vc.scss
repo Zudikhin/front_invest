@@ -117,7 +117,7 @@
                         border-radius: 20px;
                     }
                     &_wrap {
-                        width: 1200px;
+                        width: 800px;
                         background: #121120;
                         border-radius: 20px;
                         box-sizing: border-box;
@@ -267,11 +267,11 @@
                                 align-items: center;
                                 flex-wrap: wrap;
                                 margin-top: 10px;
-                                & a {
+                                & div {
                                     box-sizing: border-box;
                                     padding: 0px 20px;
                                     height: 40px;
-                                    background: #2E00E4;
+                                    border: 1px solid #FFFFFF;
                                     border-radius: 90px;
                                     line-height: 40px;
                                     font-family: 'RF Tone';
@@ -368,6 +368,11 @@
                     }
                     &_callback {
                         display: none;
+                    }
+                    &_table {
+                        &_wrap {
+                            width: 1200px;
+                        }
                     }
                 }
                 &_review {

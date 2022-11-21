@@ -38,7 +38,7 @@
                 transition: transform 0.2s linear;
                 transform: translateY(0px);
                 margin-top: 15px;
-                display: none;
+                display: block;
                 &_top {
                     display: flex;
                     justify-content: space-between;
@@ -156,15 +156,6 @@
                         line-height: 18px;
                         color: #FFFFFF;
                     }
-                }
-                &:first-child {
-                    display: block;
-                }
-                &:nth-child(2) {
-                    display: block;
-                }
-                &:nth-child(3) {
-                    display: block;
                 }
             }
         }

@@ -155,6 +155,25 @@
                             line-height: 19px;
                             color: #CBCCD0;
                             position: relative;
+                            &:after {
+                                content: "";
+                                width: 100%;
+                                height: 3px;
+                                position: absolute;
+                                left: 0px;
+                                bottom: 0px;
+                                background: #2E00E4;
+                                border-radius: 2px;
+                                opacity: 0;
+                                transition: all 0.3s linear;
+                            }
+                            &:hover {
+                                &::after {
+                                    opacity: 1;
+                                    bottom: -10px;
+                                    transition: all 0.3s linear;
+                                }
+                            }
                         }
                         &.active {
                             & a {
@@ -167,6 +186,7 @@
                                     bottom: -10px;
                                     background: #2E00E4;
                                     border-radius: 2px;
+                                    opacity: 1;
                                 }
                             }
                         }

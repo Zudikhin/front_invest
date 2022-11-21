@@ -71,19 +71,25 @@
                 height: 52px;
                 box-sizing: border-box;
                 border: 1px solid #A6A6A6;
-                opacity: 1;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 border-radius: 10px;
                 cursor: pointer;
                 margin-left: 10px;
+                opacity: 1;
+                transition: opacity 0.3s linear;
+                position: relative;
+                z-index: 2;
                 &.hide {
                     opacity: 0;
+                    z-index: 1;
+                    transition: opacity 0.3s linear;
                 }
             }
             &_qr_big {
                 display: none;
+                opacity: 0;
                 background: #070613;
                 border: 1px solid #A6A6A6;
                 border-radius: 10px;
@@ -91,8 +97,11 @@
                 padding: 18px;
                 margin-left: 10px;
                 cursor: pointer;
+                transition: opacity 0.3s linear;
                 &.active {
-                    display: block;
+                    opacity: 1;
+                    z-index: 2;
+                    transition: opacity 0.3s linear;
                 }
             }
         }
@@ -156,6 +165,7 @@
                     &_big {
                         position: absolute;
                         left: 166px;
+                        display: block;
                         & img {
                             width: 100px;
                         }

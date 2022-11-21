@@ -98,16 +98,27 @@
             left: 200px;
             top: 20px;
             z-index: 2;
-            animation: animate 3s linear infinite;
+            animation: animate 5s linear infinite;
             & img {
                 transform: rotate(45deg);
             }
         }
         &_three {
             position: absolute;
-            right: 0px;
-            top: 0px;
+            right: 400px;
+            top: 100px;
             display: none;
+            animation: animate 4s linear infinite;
+            & img {
+                transform: rotate(45deg);
+            }
+        }
+        &_four {
+            display: none;
+            animation: animate 6s linear infinite;
+            & img {
+                transform: rotate(45deg);
+            }
         }
     }
     &_back {
@@ -171,6 +182,17 @@
             &::before {
                 bottom: 20px;
                 right: -40px;
+            }
+        }
+        &_star {
+            &_three {
+                display: block;
+            }
+            &_four {
+                display: block;
+                right: 500px;
+                top: 120px;
+                position: absolute;
             }
         }
         &_back {
